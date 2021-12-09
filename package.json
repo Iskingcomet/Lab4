@@ -1,0 +1,24 @@
+{
+  "name": "cusfinal",
+  "version": "1.0.0",
+  "description": "design, implement and deploy a RESTful API according to the use-case specification",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node api.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iskingcomet/Final.git"
+  },
+  "author": "Shamar Roberts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Iskingcomet/Final/issues"
+  },
+  "homepage": "https://github.com/Iskingcomet/Final#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
