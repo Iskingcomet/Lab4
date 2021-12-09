@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>COURSE APP</title>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <script src="App.js"> </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <div id="Header">
+            <h1><strong>St. John's University<br>Course Search</strong></h1>
+            
+            <form onsubmit="return false;" id="queryForm">
+                <div id="queryRow">
+
+                    <div class="queryBox">
+                        <label for="titleQuery"><strong>Search by Title:</strong></label><br>
+                        <input type="text" id="titleQuery" name="titleQuery" value=""><br>
+                    </div>
+
+                    <div class="queryBox">
+                        <label for="nameQuery"><strong>Search by Instructor:</strong></label><br>
+                        <input type="text" id="nameQuery" name="nameQuery" value=""><br>
+                    </div>
+
+
+                    <div class="queryBox">
+                        <label for="codeQuery"><strong>Search by Course Code</Code>:</strong></label><br>
+                        <input type="text" id="codeQuery" name="codeQuery" value=""><br>
+                    </div>
+
+                    <div class="queryBox">
+                        <label for="levelQuery"><strong>Search by Level:</strong></label><br>
+                        <!--<input type="text" id="levelQuery" name="levelQuery" value=""><br>-->
+                        
+                        
+                        <select name = "levelQuery" id = "levelQuery">
+                            <option></option>
+                            <option value="Undergraduate">Undergraduate</option>
+                            <option value="Graduate">Graduate</option>
+                        </select><br>
+                    </div>
+
+                 
+                    <div class="queryBox">
+                        <button id="searchBtn" onclick="updateView(this)"><strong>SEARCH</strong></button>
+                    </div>
+
+
+                </div>
+
+            </form>
+        </div>
+
+        <div id="results">
+
+        </div>
+        
+    </body>
+
+</html>
+
+<script id="resultsView" type="text/x-handlebars-template">
+    <table class="table table-striped">
+        <tr>
+            <th>TITLE</th>
+            <th>INSTRUCTOR</th>
+            <th>CODE</th>
+            <th>LEVEL</th>
+        </tr>
+        {{#each courses}}
+            <tr>
+                <td>{{this.title}}</td>
+                <td>{{this.instructor}}</td>
+                <td>{{this.course_code}}</td>
+                <td>{{this.course_level}}</td>
+            </tr>
+        {{/each}}
+    </table>
+</script>
