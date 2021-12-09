@@ -1,0 +1,74 @@
+*{
+    font-family:"Times New Roman", Times, serif;
+}
+body{
+    margin:5%;
+    background-color:gainsboro;
+    
+    ;
+}
+
+
+table{
+    margin-top: 20px;
+    background-color:white;
+    text-align: center;
+    border-radius:8pt;
+    border:none;
+    border-color:navy;
+}
+
+td{
+    border:none;
+}
+
+h1{
+    background-color: white;
+    border: solid red 4px;
+    padding:20px;
+}
+
+input[type=text], select{
+    border:none;
+    border-radius:8pt;
+    height:35px;
+    padding-left:10px;
+    padding-right:10px;
+    text-align: center;
+}
+
+.queryBox{
+    margin-left:10px;
+    margin-right:10px;
+    margin-top:10px;
+}
+
+#searchBtn{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 20px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left:10px;
+    margin-right:10px;
+    margin-top:10px;
+    cursor: pointer;
+}
+.glowfal:hover {
+    color: white;
+    box-shadow : 0 5px 15px red;
+  }
+
+
+#Header{
+    text-align: center;
+}
+
+#queryRow{
+    display:flex;
+    margin-top:50px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
